@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Button_Behavior : MonoBehaviour
 {
@@ -14,5 +15,30 @@ public class Button_Behavior : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void LoadGame()
+    {
+        SceneManager.LoadScene("GameScene");
+    }
+
+    public void LoadInstructions()
+    {
+        SceneManager.LoadScene("InstructionScene");
+    }
+
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene("MainMenuScene");
+    }
+
+    public void LoadGameOver()
+    {
+        SceneManager.LoadScene("GameOverScene");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
